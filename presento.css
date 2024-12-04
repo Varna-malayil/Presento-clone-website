@@ -1,0 +1,523 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    
+}
+body{
+  overflow-x: hidden;
+}
+
+
+nav.fixed-top {
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: none; /* No shadow initially */
+}
+
+/* Shadow effect when scrolling */
+nav.fixed-top.scrolled {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a light bottom shadow when scrolling */
+}
+
+.moving-image {
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+}
+
+
+.custom-list {
+  list-style: none; 
+  padding-left: 0; 
+}
+
+.custom-list li {
+  background-image: url("./assets/custom-icon.png"); 
+  background-repeat: no-repeat;
+  background-size: 20px 20px; 
+  background-position: 0 50%; 
+  padding-left: 25px; 
+}
+
+
+.custom-email-input {
+  max-width: 600px; 
+  width: 100%; 
+}
+
+
+.navbar-nav .nav-item a:hover {
+  color: red !important; 
+}
+
+/* Custom style for nested dropdowns */
+.dropdown-menu .dropdown {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+
+
+.topnav .icon {
+  display: none;
+}
+
+/* Media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  /* Hide all links except the first one (Home) */
+  .topnav ul li { display: none; }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav ul.responsive {
+    position: relative;
+  }
+  /* Show all links when the responsive class is added */
+  .topnav.responsive ul li {
+    display: block;
+    text-align: left;
+  }
+   /* Ensure the Get Started button stays visible */
+  .topnav.responsive ul li:last-child {
+    display: block !important;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  /* Make the Get Started button full-width */
+  .topnav.responsive ul li button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+.one {
+  padding: 100px;
+}
+.three i {
+  color: rgb(253, 38, 38);
+  font-size: 50px;
+}
+.three h5:hover {
+  color: red;
+}
+/* Styles specifically for the client carousel */
+#owl-carousel-client {
+  width: 100%;
+  max-width: 100%;
+  padding: 80px 50px;
+}
+
+#owl-carousel-client .item img {
+  filter: grayscale(100%); /* Makes the image grayscale */
+  transition: filter 0.5s ease; /* Smooth transition when hovering */
+  height: 40px;
+  width: 100%;
+}
+
+/* Remove grayscale on hover for client carousel images */
+#owl-carousel-client .item img:hover {
+  filter: grayscale(0%); /* Turns the image to color */
+}
+
+/* For touch devices */
+#owl-carousel-client .item img:active {
+  filter: grayscale(0%); /* Turns the image to color on touch */
+}
+
+.sloped-triangle {
+  width: 100%;
+  background-color: black;
+  clip-path: polygon(0% 10%, 0% 100%, 100% 90%, 100% 0%);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.image-container {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+ 
+  height: 100%;
+  
+}
+
+
+.wtch i {
+  color: rgb(233, 36, 36);
+}
+.txt {
+  position: absolute;
+  top: 30%;
+
+  color: black;
+  text-align: start;
+
+  padding: 20px;
+}
+
+
+.brdr {
+  border: 1px solid white;
+
+  background-color: white;
+}
+.brdr:last-child {
+  margin-right: 0;
+}
+
+.brdr2 {
+  border: 1px solid rgb(214, 208, 208);
+  background-color: white;
+  gap: 10px;
+}
+.brdr2:active {
+  color: white;
+  background-color: rgb(202, 32, 32);
+}
+.brdr2 i:hover {
+  color: red;
+}
+
+.list li {
+  list-style-type: none;
+  list-style-position: inside;
+}
+.list {
+  width: 70%;
+  padding-right: 50px;
+}
+
+.card {
+  background-color: rgb(66, 61, 61);
+}
+/* portfolio */
+.nav-item {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #ff0000; /* Optional hover effect */
+}
+
+.trans {
+  visibility: hidden;
+  position: relative;
+ 
+}
+
+.trans h6 {
+  background-color: rgb(228, 57, 57);
+  padding: 5px;
+  inline-size: 100px;
+  text-align: center;
+  position: absolute;
+  top: -280px;
+  left: 1px; ;
+}
+.trans .icn {
+  font-size: larger;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: -170px;
+  left: 120px;
+}
+.trans p {
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  bottom: 10px;
+}
+
+.img:hover .trans {
+  visibility: visible;
+  background-color: black;
+}
+.trans i:hover {
+  color: red;
+}
+/* Medium screens (tablets, between 768px and 992px) */
+@media (max-width: 992px) {
+  .trans h6 {
+    top: -260px;
+    left: 0px; /* Adjust the left position */
+  }
+
+  .trans .icn {
+    top: -160px;
+    left: 120px; /* Center the icons more */
+  }
+
+  .trans p {
+    bottom: 5px;
+    font-size: 14px; /* Slightly reduce font size */
+  }
+}
+
+/* Small screens (phones, less than 768px) */
+@media (max-width: 768px) {
+  .trans h6 {
+    top: -330px;
+    left: 0px; /* Adjust the left position */
+    font-size: 14px; /* Reduce the font size */
+    inline-size: 80px; /* Make the box smaller */
+  }
+
+  .trans .icn {
+     
+    top: -200px;
+    left: 160px; /* Center the icons more */
+  }
+
+  .trans p {
+    bottom: 0;
+    left: 60px;
+    
+  }}
+ /* Zoom the image on hover */
+.portfolio-item img {
+  transition: transform 0.5s ease;
+}
+
+/* Apply zoom on the image */
+.portfolio-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Ensure that zoomed image does not overflow */
+.portfolio-item {
+  overflow: hidden;
+}
+
+/* Trans hover effect */
+.trans {
+  visibility: hidden;
+  position: relative;
+}
+
+.img:hover .trans {
+  visibility: visible;
+  background-color: black;
+}
+.emoji {
+  position: absolute;
+  right: 44%;
+  top: 75px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: white;
+}
+.count {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.item {
+  width: 70px;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: red;
+}
+
+.btn.active {
+}
+/* testimonials */
+.t1{
+  border: none;
+}
+/* Make sure the carousel takes the full width */
+#owl-carousel-testimonials {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#owl-carousel-testimonials .item {
+  width: 100%; 
+  padding: 20px; 
+}
+
+/* pricing */
+.prc sup{
+  color: red;
+
+}
+.prc span{
+  color: gray;
+}
+.prc h5{
+  color: white;
+}
+.prc h4{
+  color: #ff0000;
+}
+.prc p span{
+  text-decoration: line-through;
+  color: gray;
+}
+.prc p{
+  color: gray;
+}
+.prc .btn:hover{
+  background-color: red;
+}
+/*  */
+.accordion {
+  background-color: white;
+  cursor: pointer;
+  padding: 23px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  transition: 0.4s;
+  position: relative;
+}
+
+.accordion:after {
+  content: '\02C3'; 
+  color: #777;
+  font-weight: bold;
+  position: absolute;
+  right: 20px; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.active.accordion:after {
+  content: "\02C5"; 
+  color: red; 
+}
+
+/* Style for the accordion when active */
+.active.accordion {
+  background-color: red; 
+}
+.accordion:hover{
+  color: red;
+}
+.bordr {
+  border: 1px solid rgb(216, 213, 213);
+  margin-bottom: 10px;
+  background-color: white;
+  transition: background-color 0.4s, border-color 0.4s;
+}
+
+.bordr.active {
+  background-color: rgb(244, 229, 229); 
+  border-color: red;      
+}
+.accordion.active{
+  background-color:rgb(244, 229, 229) ;
+  color: red;
+}
+
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/* teams */
+
+.tm p {
+  color: gray;
+}
+
+.tm img {
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.tmh {
+  position: absolute;
+  top: 90%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  visibility: hidden;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  opacity: 0; 
+}
+
+.tm-img {
+  position: relative;
+}
+
+.tm-img:hover .tmh {
+  visibility: visible; 
+  opacity: 1; 
+}
+
+.tm i {
+  border: 1px solid #e8e3e3;
+  background-color: #e8e3e3;
+  padding: 3px;
+  border-radius: 3px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.tm i:hover {
+  background-color: rgb(231, 28, 28);
+  border-color: rgb(231, 28, 28);
+}
+
+/* contact */
+
+.cont i{
+  border: 2px dotted rgb(237,75,75);
+  border-radius: 24px;
+  padding: 10px;
+}
+
+
+
+ 
+/* scroll up */
+
+.scroll-arrow{
+  position: sticky;
+  left: 95%;
+  bottom: 10px;
+  --offset:100px;
+  margin-top: calc(100vh + var(--offset));
+
+
+
+
+}
+
+
